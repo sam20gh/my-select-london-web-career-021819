@@ -1,12 +1,11 @@
-def my_select(collection) 
-  empty_arr = [] 
-  
-  i=0 
-  while i < collection.length
-  empty_arr.push yield(collection[i]) 
-  i += 1 
+def my_select(array) 
+  i =0 
+  select = [] 
+  while i < array.length 
+    if (yield(array[i]))
+      select.push(array[i])
+    end 
+    i += 1 
+  end 
+  select 
 end 
-
-  empty_arr
-end 
-
